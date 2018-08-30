@@ -19,11 +19,21 @@
 2.在 plist 文件中添加</br>
 ```XML
 <key>Fabric</key>
-<dict>
-<key>APIKey</key>
-<string>替换成自己的APIKey</string>
-</dict></br>
-<key>CFBundleDevelopmentRegion</key>
+    <dict>
+        <key>APIKey</key>
+        <string>替换成自己的APIKey</string>
+        <key>Kits</key>
+        <array>
+            <dict>
+                <key>KitInfo</key>
+                <dict/>
+                <key>KitName</key>
+                <string>Crashlytics</string>
+            </dict>
+        </array>
+    </dict>
+<key>FacebookAppID</key>
+<string>154279495******</string>
 ```
 
 3.在 Build Phases 中新建 Run Script 项，并加入 Fabric 脚本</br>
