@@ -17,12 +17,14 @@
 ## 集成步骤：
 1.导入四个库 AppsFlyerLib、Bolts、Crashlytics、Fabric、FBSDKCoreKit</br>
 2.在 plist 文件中添加</br>
-<key>Fabric</key></br>
-<dict></br>
-<key>APIKey</key></br>
-<string>替换成自己的APIKey</string></br>
+'''
+<key>Fabric</key>
+<dict>
+<key>APIKey</key>
+<string>替换成自己的APIKey</string>
 </dict></br>
-<key>CFBundleDevelopmentRegion</key></br>
+<key>CFBundleDevelopmentRegion</key>
+'''
 
 3.在 Build Phases 中新建 Run Script 项，并加入 Fabric 脚本</br>
 4.AppDelegate 中分别调用 configuration、openURL、applicationBecomeActive方法</br>
