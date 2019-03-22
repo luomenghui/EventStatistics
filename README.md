@@ -17,12 +17,24 @@
 ## 集成步骤：
 1.导入四个库 AppsFlyerLib、Bolts、Crashlytics、Fabric、FBSDKCoreKit</br>
 2.在 plist 文件中添加</br>
-<key>Fabric</key></br>
-<dict></br>
-<key>APIKey</key></br>
-<string>替换成自己的APIKey</string></br>
-</dict></br>
-<key>CFBundleDevelopmentRegion</key></br>
+```XML
+<key>Fabric</key>
+<dict>
+    <key>APIKey</key>
+    <string>替换成自己的APIKey</string>
+    <key>Kits</key>
+    <array>
+        <dict>
+            <key>KitInfo</key>
+            <dict/>
+            <key>KitName</key>
+            <string>Crashlytics</string>
+        </dict>
+    </array>
+</dict>
+<key>FacebookAppID</key>
+<string>154279495******</string>
+```
 
 3.在 Build Phases 中新建 Run Script 项，并加入 Fabric 脚本</br>
 4.AppDelegate 中分别调用 configuration、openURL、applicationBecomeActive方法</br>
